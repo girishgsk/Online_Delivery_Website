@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Food Delivery Service India | GSKmeals.com </title>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <!-- <link rel="stylesheet" media="screen and (max-width: 900px)" href="css/phone.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+
+        .navbar{
+            display: flex;
+            align-items: center;
+            /*background-color: rgba(138, 118, 129, 0.763);*/
+            margin: 0px;
+            padding: 0px;
+            position:sticky;
+            top: 0px;
+            /*position: relative;*/
+            
+
+        }
+
+        .navbar::before {
+            content: "";
+            background-color: black;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.4;
+        }
+
+        ul {
+            display: flex;
+        }
+
+        .navbar ul li {
+            padding: 20px;
+            list-style: none;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            font-size: 1.3rem;
+            color: white;
+            border-radius: 20px;
+            padding: 3px 22px;
+            font-family: 'Bree Serif', serif;
+        }
+
+        .navbar ul li a:hover {
+            color: white;
+            background-color: black;
+            border-radius: 20px;
+        }
+
+        #logo img {
+            position: relative;
+            left: 20px;
+            /*width: 100px;*/
+            height: 57px;
+            margin: 3px 6px;
+            border-radius: 60px;
+
+        }
+
+        /* Home Section */
+        #home {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            padding: 2px 200px;
+            height: 300px;
+        }
+
+        #home::before {
+            content: "";
+            background: url(bgfood.jpg.jpg) no-repeat center center/cover;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.79;
+        }
+
+        #home h1 {
+            font-family: 'Bree Serif', serif;
+
+            color: black;
+        }
+
+        #home p {
+            font-family: 'Bree Serif', serif;
+            color: rgb(0, 0, 0);
+        }
+
+        .btn {
+            background-color: whitesmoke;
+            border-radius: 6px;
+            font-family: 'Bree Serif', serif;
+            padding: 3px;
+            font-size: 0.8rem;
+            cursor: pointer;
+
+        }
+        .btn:hover{
+            color: aliceblue;
+            background-color: black;
+        }
+
+        /* Services section*/
+        .h-primary-center {
+            font-family: 'Bree Serif', serif;
+            margin-top: 220px;
+            font-size: 3.4rem;
+            text-align: center;
+        }
+
+        #services {
+            
+            display: flex;
+            margin: 32px;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        #services .box {
+            display: flex;
+            flex-direction: column;
+            border: solid red;
+            border-radius: 20px;
+            margin-top: -5px;
+            margin: 20px;
+            align-items: center;
+            justify-content: center;
+            justify-items: center;
+            padding: 15px;
+            background-color: antiquewhite;
+            
+        }
+
+        #services .box img {
+            /*margin: 12px;*/
+            height: 160px;
+            display: inline;
+            margin: auto;
+
+        }
+
+        #services .box p {
+            display: flex;
+            color: black;
+            justify-content: center;
+        }
+
+        /* Client Section */
+        #client-section{
+            position: relative;
+        }
+        .h-primary-center-1{
+            font-family: 'Bree Serif', serif;
+            margin-top: 40px;
+            font-size: 3.4rem;
+            text-align: center;
+        }
+        #client{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 34px;
+        }
+        #client-section::before{
+            content: "";
+            position:absolute;
+            background: url(bg2food.jpg)no-repeat center center/cover;
+            width: 100%;
+            height: 350px;
+            z-index: -1;
+            opacity: 0.5;
+        }
+        #client .client-item{
+            margin: 44px;
+        }
+        #client .client-item img{
+             height: 100px;
+             width: 100px;
+        }
+
+        /* Contact section */
+        .h-seconary {
+            font-family: 'Bree Serif', serif;
+            margin-top: 20px;
+            font-size: 3.4rem;
+            text-align: center;
+        }
+        #contact{
+            position: relative;
+        }
+        #contact::before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 580px;
+            z-index: -1;
+            background: url(contactimg.jpg)no-repeat center center/cover;
+            opacity: 0.6;
+        }
+        #contact-box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 30px;
+            
+            
+        }
+        #contact-box input,
+        #contact-box textarea{
+            width: 100%;
+            padding: 0.5rem;
+        }
+        #contact-box form{
+            width: 40%;
+        }
+        #contact-box label{
+            font-size: 1.3rem;
+        }
+      
+        /* Footer */
+        .footer{
+           background-color: black;
+           color: white;
+           position: relative;
+           display: flex;
+           justify-content:center;
+           align-items: center;
+           margin-top: 92px;
+           
+        }
+
+        /* Utility class*/
+        .h-primary {
+            font-size: 3.4rem;
+            padding: 12px;
+        }
+
+
+        /*---------------------- Phone size screen  media*------------------------*/
+
+        @media only screen and (max-width:900px){
+            
+            /* Navigation Section */
+            .navbar{
+                display: flex;
+                flex-direction: column;
+            }
+
+            /* Services */
+            #services{
+                flex-direction: column;
+            }           
+        }
+        @media only screen and (max-width:766px)
+        /* Home Section*/
+        
+        {
+            .h-primary{
+                font-size: 2.4rem;
+            }
+        }
+        @media only screen and (max-width:670px)
+        
+        {
+        
+        .navbar ul li a{
+            font-size: 1rem;
+            padding: 0px 5px;
+        }
+        
+        section#home{
+            padding: 2px 80px;
+        }
+        /* Client Section */
+        #client{
+            flex-wrap: wrap;
+        }
+        #client-section::before{
+            height: 600px;
+        }
+    }
+    @media only screen and (max-width:443px){
+        #client-section::before{
+            height: 930px;  
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <!-- *******************************Navigation bar************************* -->
+    <nav class="navbar">
+        <div id="logo">
+            <img src="gskimg.jpg" alt="GSKmeals.com">
+        </div>
+        <ul>
+            <li class="items"><a href="#home">Home</a></li>
+            <li class="items"><a href="#services container">Service</a></li>
+            <li class="items"><a href="#client-section">About Us</a></li>
+            <li class="items"><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <h1 class="h-primary"> Wellcome To GSK Meal.com</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus mollitia aut nam beatae incidunt ea
+            debitis nihil autem nostrum</p>
+        <p>Lorem ipsum dolor .</p>
+        <button class="btn">order now</button>
+    </section>
+    <!-- ******************************Services ************************************* -->
+    <section id="services container">
+        <h1 class="h-primary-center">Our services</h1>
+        <div id="services">
+            <div class="box">
+                <img src="img1.jpg" alt="service">
+                <h2 class="h-secondary center"> Food Ordering</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi sint velit harum sapient</p>
+            </div>
+            <div class="box">
+                <img src="img2.jpg" alt="service">
+                <h2 class="h-secondary center"> Bulk Ordering</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi sint velit harum sapient</p>
+            </div>
+            <div class="box">
+                <img src="delivery.jpg" alt="service">
+                <h2 class="h-secondary center"> Instant Delivery</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi sint velit harum sapient</p>
+            </div>
+        </div>
+    </section>
+      <!-- *************************Our client ********************************* -->
+    <section id="client-section">
+        <h1 class="h-primary-center-1"> Our Client </h1>
+        <div id="client">
+        <div class="client-item">
+            <img src="apple.jpg" alt="apple">
+        </div>
+        <div class="client-item">
+            <img src="google.jpg" alt="apple">
+        </div>
+        <div class="client-item">
+            <img src="microsoft.jpg" alt="apple">
+        </div>
+        <div class="client-item">
+            <img src="hp.jpg" alt="apple">
+        </div>
+        </div>
+    <!--******************************-Contact Us *********************************** -->
+    </section>
+
+    <section id="contact">
+        <h1 class="h-seconary"> Contact Us</h1>
+        <div id="contact-box">
+            <form action="php">
+                <div class="form-group">
+                    <label for="name">name:</label>
+                    <input type="text" name="name" id="name" placeholder="Enter yor name">
+                </div>
+                <div class="form-group">
+                    <label for="name">phone:</label>
+                    <input type="text" name="mobile" id="mobile" placeholder="Enter yor mobile no.">
+                </div>
+                <div class="form-group">
+                    <label for="name">email:</label>
+                    <input type="text" name="email" id="email" placeholder="Enter yor email">
+                </div>
+                <div class="form-group">
+                    <label for="massage">write us:</label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </div>
+
+            </form>
+        </div>
+    </section>
+    
+     <section>
+    <footer>
+        <div class="footer">
+            Copyright &copy;www.GSKmeal.com . All rights reserved!
+        </div>
+    </footer>
+    </section> 
+
+
+</body>
+
+</html>
+
+
